@@ -32,4 +32,7 @@ public class Deck {
         Collections.shuffle(cards);
     }
 
+    public void dealCard() {
+        this.cards.remove(0);
+    }
 }
