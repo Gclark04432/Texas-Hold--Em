@@ -15,4 +15,8 @@ public class Hand {
     public void addToHand(PlayingCard card){
         this.cards.add(card);
     }
+
+    public PlayingCard getCardByIndex(int index) {
+        return this.cards.get(index);
+    }
 }

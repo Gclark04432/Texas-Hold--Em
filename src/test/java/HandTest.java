@@ -8,12 +8,18 @@ import static org.junit.Assert.assertEquals;
 
 public class HandTest {
     private Hand hand;
-    private PlayingCard card;
+    private PlayingCard aceOfDiamonds;
+    private PlayingCard aceOfHearts;
+    private PlayingCard aceOfSpades;
+    private PlayingCard aceOfClubs;
 
     @Before
     public void before(){
         hand = new Hand();
-        card = new PlayingCard(Rank.ACE, Suit.DIAMONDS);
+        aceOfDiamonds = new PlayingCard(Rank.ACE, Suit.DIAMONDS);
+        aceOfHearts = new PlayingCard(Rank.ACE, Suit.HEARTS);
+        aceOfClubs = new PlayingCard(Rank.ACE, Suit.CLUBS);
+        aceOfSpades = new PlayingCard(Rank.ACE, Suit.SPADES);
     }
 
     @Test
@@ -23,7 +29,16 @@ public class HandTest {
 
     @Test
     public void canAddCardToHand(){
-        hand.addToHand(card);
+        hand.addToHand(aceOfDiamonds);
         assertEquals(1, hand.getHandSize());
+    }
+
+    @Test
+    public void canReadIndividualCardInHand(){
+        hand.addToHand(aceOfDiamonds);
+        hand.addToHand(aceOfHearts);
+        hand.addToHand(aceOfClubs);
+        hand.addToHand(aceOfSpades);
+        assertEquals(aceOfDiamonds, hand.getCardByIndex(0));
     }
 }
