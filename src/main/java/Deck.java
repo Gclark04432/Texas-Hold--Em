@@ -2,7 +2,6 @@ import Cards.PlayingCard;
 import Cards.Rank;
 import Cards.Suit;
 
-import javax.smartcardio.Card;
 import java.util.ArrayList;
 import java.util.Collections;
 

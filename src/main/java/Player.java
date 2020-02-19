@@ -1,4 +1,4 @@
-public class Player {
+public class Player implements IGetsCards{
     private Hand hand;
     private String name;
 
